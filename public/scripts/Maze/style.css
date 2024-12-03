@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at center, #1a001f, #000814 80%);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  letter-spacing: 0.05em;
+}
+
+.game-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #181818 30%, #2a2a2a);
+  box-shadow: inset 0px 0px 150px rgba(0, 0, 0, 0.8),
+              inset 0px 0px 50px rgba(128, 0, 128, 0.5);
+  border: 10px solid rgba(128, 0, 128, 0.3);
+  border-radius: 20px;
+}
+
+.instructions {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8),
+               0px 0px 25px rgba(255, 0, 255, 0.5);
+}
+
+.instructions h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ff33cc;
+  animation: pulseText 3s infinite alternate;
+}
+
+.instructions p {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.wall {
+  background: linear-gradient(135deg, #3b2f2f 40%, #1d1a1a);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8),
+              0px 0px 15px rgba(255, 0, 255, 0.4);
+  border: 2px solid rgba(128, 64, 64, 0.6);
+  border-radius: 10px;
+  animation: fadeInWalls 1s ease-out forwards;
+}
+
+.wall.mossy {
+  background: linear-gradient(135deg, #3b2f2f 40%, #2a4b2a 60%);
+  box-shadow: inset 0px 0px 15px rgba(0, 128, 0, 0.5),
+              0px 0px 20px rgba(0, 255, 0, 0.3);
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0px 0px 15px rgba(255, 0, 255, 0.8),
+                 0px 0px 30px rgba(255, 0, 255, 0.5);
+  }
+  to {
+    text-shadow: 0px 0px 35px rgba(255, 0, 255, 1),
+                 0px 0px 50px rgba(255, 0, 255, 0.7);
+  }
+}
+
+@keyframes subtleGlow {
+  from {
+    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.2),
+                0px 0px 80px 20px rgba(128, 0, 128, 0.4);
+  }
+  to {
+    box-shadow: 0px 0px 40px 15px rgba(255, 255, 255, 0.3),
+                0px 0px 100px 25px rgba(128, 0, 128, 0.6);
+  }
+}
+
+@keyframes pulseText {
+  from {
+    color: #ff33cc;
+    text-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
+  }
+  to {
+    color: #ff66ff;
+    text-shadow: 0px 0px 40px rgba(255, 0, 255, 1);
+  }
+}
+
+@keyframes fadeInWalls {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

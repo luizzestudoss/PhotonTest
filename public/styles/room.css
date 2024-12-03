@@ -1,0 +1,134 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #cccccc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+    color: #ff5555;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+.players-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0 0 15px;
+    background: #1e1e1e;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.players-list li {
+    background: #262626;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    color: #cccccc;
+    transition: background 0.2s;
+}
+
+.players-list li:hover {
+    background: #333333;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #333333;
+    background: #1e1e1e;
+    color: #cccccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #ff5555;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e04444;
+}
+
+#creator-menu {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#creator-menu h3 {
+    color: #ff5555;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+#creator-menu label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+#creator-menu select, #creator-menu input {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    color: #cccccc;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#seed-display {
+    background: #1a1a1a;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #cccccc;
+}
